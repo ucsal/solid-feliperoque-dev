@@ -3,11 +3,11 @@ package br.com.ucsal.olimpiadas;
 import java.util.Scanner;
 
 public class App {
-
+	private static final ServicosOlimpiada servico = new ServicosOlimpiada();
 	private static final Scanner in = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		seed();
+		servico.seed();
 
 		while (true) {
 			System.out.println("\n=== OLIMPÍADA DE QUESTÕES (V1) ===");
@@ -176,25 +176,16 @@ public class App {
 
 		Repositorio.tentativas.add(tentativa);
 
-		int nota = calcularNota(tentativa);
+		int nota = servico.calcularNota(tentativa);
 		System.out.println("\n--- Fim da Prova ---");
 		System.out.println("Nota (acertos): " + nota + " / " + tentativa.getRespostas().size());
-	}
-
-	public static int calcularNota(Tentativa tentativa) {
-		int acertos = 0;
-		for (var r : tentativa.getRespostas()) {
-			if (r.isCorreta())
-				acertos++;
-		}
-		return acertos;
 	}
 
 	static void listarTentativas() {
 		System.out.println("\n--- Tentativas ---");
 		for (var t : Repositorio.tentativas) {
 			System.out.printf("#%d | participante=%d | prova=%d | nota=%d/%d%n", t.getId(), t.getParticipanteId(),
-					t.getProvaId(), calcularNota(t), t.getRespostas().size());
+					t.getProvaId(), servico.calcularNota(t), t.getRespostas().size());
 		}
 	}
 
@@ -275,30 +266,4 @@ public class App {
 		System.out.println();
 	}
 
-
-	static void seed() {
-
-		var prova = new Prova();
-		prova.setId(Repositorio.proximaProvaId++);
-		prova.setTitulo("Olimpíada 2026 • Nível 1 • Prova A");
-		Repositorio.provas.add(prova);
-
-		var q1 = new Questao();
-		q1.setId(Repositorio.proximaQuestaoId++);
-		q1.setProvaId(prova.getId());
-
-		q1.setEnunciado("""
-				Questão 1 — Mate em 1.
-				É a vez das brancas.
-				Encontre o lance que dá mate imediatamente.
-				""");
-
-		q1.setFenInicial("6k1/5ppp/8/8/8/7Q/6PP/6K1 w - - 0 1");
-
-		q1.setAlternativas(new String[] { "A) Qh7#", "B) Qf5#", "C) Qc8#", "D) Qh8#", "E) Qe6#" });
-
-		q1.setAlternativaCorreta('C');
-
-		Repositorio.questoes.add(q1);
-	}
 }

@@ -1,6 +1,12 @@
-package br.com.ucsal.olimpiadas;
+package servicos;
+
+import br.com.ucsal.olimpiadas.Prova;
+import br.com.ucsal.olimpiadas.Questao;
+import br.com.ucsal.olimpiadas.Tentativa;
+import repositorio.Repositorio;
 
 public class ServicosOlimpiada {
+	
 	
 	public void seed() {
         var prova = new Prova();

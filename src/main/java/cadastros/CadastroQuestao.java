@@ -2,18 +2,18 @@ package cadastros;
 
 import java.util.Scanner;
 
-import br.com.ucsal.olimpiadas.Questao;
 import busca.Escolher;
+import entidades.Questao;
 import repositorio.Repositorio;
 
 public class CadastroQuestao implements Cadastro {
 	
 	private final Scanner in;
-	private final Escolher epr;
+	private final Escolher escolherProva;
 	
-	public CadastroQuestao(Scanner in, Escolher epr){
+	public CadastroQuestao(Scanner in, Escolher escolherProva){
 		this.in = in;
-		this.epr = epr;
+		this.escolherProva = escolherProva;
 	}
 
 	@Override
@@ -23,7 +23,7 @@ public class CadastroQuestao implements Cadastro {
 			return;
 		}
 		
-		var provaId = epr.escolher();
+		var provaId = escolherProva.escolher();
 		if (provaId == null)
 			return;
 

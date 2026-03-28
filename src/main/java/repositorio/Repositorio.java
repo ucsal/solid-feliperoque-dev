@@ -3,10 +3,10 @@ package repositorio;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.ucsal.olimpiadas.Participante;
-import br.com.ucsal.olimpiadas.Prova;
-import br.com.ucsal.olimpiadas.Questao;
-import br.com.ucsal.olimpiadas.Tentativa;
+import entidades.Participante;
+import entidades.Prova;
+import entidades.Questao;
+import entidaes.questao.Tentativa;
 
 public class Repositorio {
 

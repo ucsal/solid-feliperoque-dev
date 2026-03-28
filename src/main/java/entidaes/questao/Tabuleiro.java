@@ -1,4 +1,4 @@
-package br.com.ucsal.olimpiadas;
+package entidaes.questao;
 
 public class Tabuleiro {
 

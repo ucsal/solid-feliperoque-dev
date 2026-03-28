@@ -1,8 +1,8 @@
 package servicos;
 
-import br.com.ucsal.olimpiadas.Prova;
-import br.com.ucsal.olimpiadas.Questao;
-import br.com.ucsal.olimpiadas.Tentativa;
+import entidades.Prova;
+import entidades.Questao;
+import entidaes.questao.Tentativa;
 import repositorio.Repositorio;
 
 public class ServicosOlimpiada {

@@ -2,7 +2,7 @@ package cadastros;
 
 import java.util.Scanner;
 
-import br.com.ucsal.olimpiadas.Participante;
+import entidades.Participante;
 import repositorio.Repositorio;
 
 public class CadastroParticipante implements Cadastro {

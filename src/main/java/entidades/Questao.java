@@ -1,4 +1,4 @@
-package br.com.ucsal.olimpiadas;
+package entidades;
 
 import java.util.Arrays;
 

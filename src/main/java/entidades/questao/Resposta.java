@@ -1,4 +1,4 @@
-package br.com.ucsal.olimpiadas;
+package entidades.questao;
 
 public class Resposta {
 

@@ -6,7 +6,7 @@ import java.util.List;
 import entidades.Participante;
 import entidades.Prova;
 import entidades.Questao;
-import entidaes.questao.Tentativa;
+import entidades.questao.Tentativa;
 
 public class Repositorio {
 

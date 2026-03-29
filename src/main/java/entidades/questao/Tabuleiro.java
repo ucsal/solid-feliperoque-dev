@@ -1,4 +1,4 @@
-package entidaes.questao;
+package entidades.questao;
 
 public class Tabuleiro {
 

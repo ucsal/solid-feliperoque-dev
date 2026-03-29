@@ -31,7 +31,6 @@ public class CadastroProva implements Cadastro {
 		Repositorio.provas.add(prova);
 		System.out.println("Prova criada: " + prova.getId());
 
-		in.close();
 	}
 
 }

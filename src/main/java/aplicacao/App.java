@@ -9,7 +9,7 @@ import cadastros.Cadastro;
 import cadastros.CadastroParticipante;
 import cadastros.CadastroProva;
 import cadastros.CadastroQuestao;
-import entidaes.questao.Tabuleiro;
+import entidades.questao.Tabuleiro;
 import servicos.ServicosOlimpiada;
 import servicos.ServicosProva;
 import servicos.ServicosTentativas;
@@ -52,12 +52,12 @@ public class App {
 			case "5"-> tentativas.listarTentativas();
 			case "0"-> {
 				System.out.println("tchau");
+				in.close();
 				return;
 			}
 			default ->
 				System.out.println("opção inválida");
 			}
-			in.close();
 		}
 	}
 }

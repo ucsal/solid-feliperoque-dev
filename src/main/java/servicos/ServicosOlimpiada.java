@@ -2,7 +2,7 @@ package servicos;
 
 import entidades.Prova;
 import entidades.Questao;
-import entidaes.questao.Tentativa;
+import entidades.questao.Tentativa;
 import repositorio.Repositorio;
 
 public class ServicosOlimpiada {

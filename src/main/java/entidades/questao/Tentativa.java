@@ -1,4 +1,4 @@
-package entidaes.questao;
+package entidades.questao;
 
 import java.util.ArrayList;
 import java.util.List;

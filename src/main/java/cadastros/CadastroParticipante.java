@@ -34,6 +34,5 @@ public class CadastroParticipante implements Cadastro {
 		Repositorio.participantes.add(p);
 		System.out.println("Participante cadastrado: " + p.getId());
 		
-		in.close();
 	}
 }

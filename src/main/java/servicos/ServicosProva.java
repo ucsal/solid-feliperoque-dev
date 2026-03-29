@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 import busca.Escolher;
 import entidades.Questao;
-import entidaes.questao.Resposta;
-import entidaes.questao.Tabuleiro;
-import entidaes.questao.Tentativa;
+import entidades.questao.Resposta;
+import entidades.questao.Tabuleiro;
+import entidades.questao.Tentativa;
 import repositorio.Repositorio;
 
 public class ServicosProva {
@@ -45,7 +45,7 @@ public class ServicosProva {
 			return;
 
 		var questoesDaProva = Repositorio.questoes.stream().filter(q -> q.getProvaId() == provaId).toList();
-
+		
 		if (questoesDaProva.isEmpty()) {
 			System.out.println("esta prova não possui questões cadastradas");
 			return;
